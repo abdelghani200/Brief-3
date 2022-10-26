@@ -6,6 +6,8 @@
     --color5:#A5ADB3;
     --padding-1:8%;
     --padding-2:4%;
+    --shadow:0 1px 5px rgba(233, 222, 222, 0.8);
+    --shadow1: 20px 20px 50px 10px rgb(248, 247, 246) inset;
 }
 
 *{
@@ -16,7 +18,6 @@
 
 .accueil{
     display: grid;
-    grid-gap: 0px;
     justify-content: space-around;
     
 }
@@ -29,10 +30,15 @@ nav img{
 
 nav{
     display: grid;
-    grid-gap: 50px;
     padding: 2rem;
     list-style: none;
+    padding-left: 8rem;
     grid-template-columns: repeat(2,1fr);
+    position: fixed;
+    background-color: var(--color2);
+    border-bottom: 1px var(--color5);
+    width: 100%;
+    z-index: 10;
 }    
 
 nav ul {
@@ -57,7 +63,7 @@ span{
     display: grid;
     grid-gap: 500px;
     grid-template-columns: repeat(2,1fr);
-    
+    margin-top: 152px;   
 }
 
 .content .text{
@@ -70,7 +76,7 @@ span{
     padding-left: 6.5rem;
 }
 .text h2{
-    padding: var(--padding-1);
+    padding: var(--padding-2);
 }
 
 pre{
@@ -152,6 +158,7 @@ svg{
     grid-template-columns: repeat(4,1fr);
     background-color: #F8F9FD;
     justify-content: space-around;
+    margin-top: 60px;
 }
 .Pages img{
     width: 200px;
@@ -176,21 +183,8 @@ svg{
 
 /* contact style */
 
-.contact-1 h3{
+p{
     text-align: center;
-}
-.contact-1 img{
-    width: 90%;
-    height: 400px;
-    padding-left: 10rem;
-}
-
-.contact-1 p{
-    height: 200px;
-    z-index: 99;
-    margin-top: -142px;
-    width: 600px;
-    padding-left: 10rem;
 }
 
 .formation-contact{
@@ -198,7 +192,6 @@ svg{
     grid-gap: 40px;
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
-    margin-top: 12px;
 }
 
 .formation-pers{
@@ -212,7 +205,7 @@ svg{
     display: grid;
     grid-gap: 2px;
     margin-top: 10px;
-    
+    padding: 2rem;
 }
 .formation-contact label,input{
     width: 300px;
@@ -236,11 +229,220 @@ button{
     
 }
 button:hover{
-    background-color: var(--color4);
+    background-color: var(--color2);
     color: var(--color3);
 }
 
+/*carte style */
+
+.carte img{
+    width: 100%;
+    height: 400px;
+}
+
+.carte h5{
+    position: absolute;
+    z-index: 99;
+    padding-left: 43rem;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color2);
+    margin-top: 235px;
+    margin-bottom: 19px;
+}
+
+.circular--square { 
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; 
+    padding: 2rem;
+}
+.cirlce p {
+    background-color: var(--color3);
+    width: 50px;
+    height:50px;
+    padding: 0.85rem;
+    border-radius: 50px;
+}
+
+.cirlce{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 200px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 30px;
+    padding: 8rem;
+    color: var(--color2);
+    cursor: pointer;
+}
+
+.select{
+    text-align: center;
+}
+#select-title{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2rem;
+}
+#type-menu{
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: var(--color3);
+}
+.menu{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center;
+    
+}
+#plat-txt{
+    text-align: center;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    
+}
+.menu-food img{
+    
+    justify-content:space-around;
+}
+.menu-food{
+    padding: 3rem;
+    
+}
+
+.f-1{
+    margin-top: -22px;
+}
+
+#btn-menu{
+    background-color: var(--color3);
+    color: var(--color2);
+    text-decoration: none;
+    padding: 0.75rem;
+    margin-left: 4rem; 
+    border-radius: 12px;
+}
+#btn-menu a{
+    color: var(--color2);
+}
+#btn-menu:hover{
+    background-color: var(--color2);
+    color: var(--color3);
+    border: 1px solid;
+}
+
+.form-12{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    
+}
+.form-12 p{
+    padding: 1.5rem;
+    margin-top: 14rem;
+    
+}
+/*  salade */
+#salade-algue{
+    padding-left: 4.5rem;
+}
+#salade-chou{
+    padding-left: 3rem;
+}
+
+.form-13{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    
+}
+.form-13 p{
+    padding: 1.5rem;
+    
+}
+
+/* propos */
+.propos-text{
+    display: flex;
+    align-items: flex-end;
+}
+#spanpan{
+    color: var(--color4);
+}
 
 
+.propos-text img{
+    width: 600px;
+    height: 400px;
+    padding-right: 12rem;
+}
 
+#btn-read{
+    
+    text-decoration: none;
+    padding-right: 10.75rem;
+    border-radius: 12px;
 
+}
+
+.propos-text{
+    display: grid;
+    grid-gap: 500px;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 21px;   
+}
+
+.text-12{
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-1);
+    padding-left: 17%;
+}
+
+.btn-read{
+    text-decoration: none;
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 0.81rem 3.8rem;
+    margin-left: 7rem;
+    border-radius: 15px;
+}
+
+.btn-read:hover{
+    color: var(--color4);
+}
+
+/* team */
+.team{
+    height: 54rem;
+}
+.team img{
+    width: 250px;
+    height: 337px;
+}
+
+#chef-team{
+    color: var(--color3);
+}
+
+.team h1{
+    text-align: center;
+    margin-top: 34px;
+}
+.images-team{
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+    grid-template-rows: repeat(3,326px);
+    grid-gap: 18px;
+    
+    margin-left: 22rem;
+    margin-top: 55px;
+}
