@@ -152,7 +152,23 @@ svg{
     
 }
 
+.footer-1 p{
+    color: var(--color5);
+    text-align: center;
+    grid-column: 2 / 4;
+    
+}
+
 .footer{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    background-color: #F8F9FD;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.footer-1{
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(4,1fr);
@@ -314,9 +330,11 @@ button:hover{
     
 }
 
+/*
 .f-1{
     margin-top: -22px;
 }
+*/
 
 #btn-menu{
     background-color: var(--color3);
@@ -366,7 +384,7 @@ button:hover{
 }
 .form-13 p{
     padding: 1.5rem;
-    
+    margin-top: -3rem;
 }
 
 /* propos */
@@ -446,3 +464,10 @@ button:hover{
     margin-left: 22rem;
     margin-top: 55px;
 }
+
+
+
+/*menu button */
+
+
+

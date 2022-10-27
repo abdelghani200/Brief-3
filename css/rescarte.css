@@ -1,0 +1,86 @@
+@media screen and (max-width:520px){
+    .menu{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        justify-content: center;
+        padding-left: 5rem;
+    }
+    .cirlce{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 200px;
+        position: absolute;
+        z-index: 1;
+        margin-top: 30px;
+        padding: 8rem;
+        color: var(--color2);
+        cursor: pointer;
+    }
+    .form-12{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        
+    }
+    .form-12 p{
+        padding: 0.75rem;
+        margin-top: 12.75rem;
+        
+    }
+    
+    .form-13{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        
+    }
+    .form-13 p{
+        padding: 1.75rem;
+       
+        
+    }
+    .fop-1{
+        margin-top: -787px;
+    }
+
+    .fop-2{
+        margin-top: -533px;
+    }
+
+    .fop-3{
+        margin-top: -275px;
+    }
+
+    .fop-4{
+        margin-top: -9px;
+    }
+
+    .f-1{
+        margin-top: -49rem;
+    }
+    .f-2{
+        margin-top: -33rem;
+    }
+    .f-3{
+        margin-top: -17rem;
+    }
+    .circular--square { 
+        width: 250px;
+        height: 250px;
+        border-radius: 50%; 
+        padding: 3rem;
+    }
+    #plat-txt{
+        text-align: center;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        padding-right: 8rem;
+    }
+    
+    
+    
+}
