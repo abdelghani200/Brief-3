@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +9,47 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/rescarte.css">
+    <link rel="stylesheet" href="css/styleShop.css">
+
 </head>
+
 <body>
-    <section  id="navbar" class="accueil">
-        <nav>
-            <img src="images/logo-hitaka.png" id="logo">
-            <ul>
-                <li><a href="index.html" id="scroll-page">Accuiel</a></li>
-                <li><a href="carte.html" id="scroll-page">Catre</a></li>
-                <li><a href="propos.html" id="scroll-page">A propos</a></li>
-                <li><a href="contact.html" id="scroll-page">Contact</a></li>
+    <section id="navbar" class="accueil">
+        <nav class="menu-nav" id="header">
+            <img src="images/logo-hitaka.png" id="logo" class="logo-1" classe="active">
+            <ul class="nav2-menu">
+                <li><a href="index.html" class="nav-item">Accuiel</a></li>
+                <li><a href="carte.html" class="nav-item">Catre</a></li>
+                <li><a href="propos.html" class="nav-item">A propos</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
             </ul>
+            <div class="cart">
+                <a href="carte.html">
+                    <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                </a>
+            </div>
+            <div id="hamberger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </section>
-    
+
     <div class="carte">
         <h5>Catre</h5>
         <img src="images/15.webp">
     </div>
-    
-        <div class="select">
-            <p id="select-title">Select Your Choice</p>
-            <select id="type-menu">
+
+    <div class="select">
+        <p id="select-title">Select Your Choice</p>
+        <select id="type-menu">
                 <option value="1"><label class="type">All</label></option>
                 <option value="2"><label>Salade</label></option>
                 <option value="3"><label>Plats</label></option>
                 <option value="4"><label>Obento</label></option>
             </select>
-        </div>
+    </div>
     <section class="menu">
         <div class="menu-food">
             <h1 id="plat-txt">Salades Menu</h1>
@@ -45,30 +59,30 @@
                 <p>42$</p>
                 <p>42$</p>
             </div>
-            <div class="form-12">
-                <div>
+            <div class="form-12" id="salade">
+                <div class="box">
                     <p>salade concombre soja poivron</p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu" class="add-cart cart1">Add to cart</a>
                 </div>
-                <div>
+                <div class="box">
                     <p>salade de chou blanc et carotte</p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu" class="add-cart cart2">Add to cart</a>
                 </div>
-                <div>
+                <div class="box">
                     <p id="salade-algue">salade d'algues </p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu" class="add-cart cart3">Add to cart</a>
                 </div>
-                <div>
+                <div class="box">
                     <p id="salade-chou">salade de chou et daikon </p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu" class="add-cart cart4">Add to cart</a>
                 </div>
             </div>
             <img class="circular--square" src="images/salade-concombresojapoivron-a-la-japonaise--278713p453800.jpg">
             <img class="circular--square" src="images/salade_de_chou_blanc_et_carotte.jpg">
             <img class="circular--square" src="images/salade d'algues.webp">
             <img class="circular--square" src="images/salade-de-chou-et-daikon-a-la-japonaise.jpeg">
-        </div> 
-        
+        </div>
+
         <div class="menu-food">
             <h1 id="plat-txt">Plats Menu</h1>
             <div class="cirlce">
@@ -77,32 +91,32 @@
                 <p>42$</p>
                 <p>42$</p>
             </div>
-            
+
             <img class="circular--square" src="images/Gyoza.jpg">
             <img class="circular--square" src="images/Okonomiyaki.jpg">
             <img class="circular--square" src="images/Yakitori.png">
             <img class="circular--square" src="images/Tonkatsu.jpg">
-            
+
             <div class="form-13">
                 <div class="f-1">
                     <p>salade concombre soja poivron</p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu">Add to cart</a>
                 </div>
                 <div class="f-2">
                     <p>salade de chou blanc et carotte</p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu">Add to cart</a>
                 </div>
                 <div class="f-3">
                     <p id="salade-algue">salade d'algues </p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu">Add to cart</a>
                 </div>
                 <div class="f-4">
                     <p id="salade-chou">salade de chou et daikon </p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu">Add to cart</a>
                 </div>
-            </div> 
+            </div>
 
-        </div> 
+        </div>
 
         <div class="menu-food">
             <h1 id="plat-txt">Obento Menu</h1>
@@ -117,27 +131,26 @@
             <img class="circular--square" src="images/obento- art culinaire.jpg">
             <img class="circular--square" src="images/Obento Box Guide.jpg">
             <div class="form-13">
-                <div class="fop-1">
+                <div class="fop-1" class="box">
                     <p>salade concombre soja poivron</p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu" class="add-cart cart1">Add to cart</a>
                 </div>
-                <div class="fop-2">
+                <div class="fop-2" class="box">
                     <p>salade de chou blanc et carotte</p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
-                </div >
-                <div class="fop-3">
+                    <a href="#" id="btn-menu" class="add-cart cart2">Add to cart</a>
+                </div>
+                <div class="fop-3" class="box">
                     <p id="salade-algue">salade d'algues </p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu" class="add-cart cart3">Add to cart</a>
                 </div>
-                <div class="fop-4">
+                <div class="fop-4" class="box">
                     <p id="salade-chou">salade de chou et daikon </p>
-                    <a href="#" id="btn-menu">ORDER NOW</a>
+                    <a href="#" id="btn-menu" class="add-cart cart4">Add to cart</a>
                 </div>
-        </div> 
-        
+            </div>
+
     </section>
 
-    
 
 
 
@@ -149,6 +162,17 @@
 
 
 
+    <div class="products-container">
+        <div class="product-header">
+            <h5 class="product-title">Product</h5>
+            <h5 class="price">Price</h5>
+            <h5 class="quanttity">Quantity</h5>
+            <h5 class="total">Total</h5>
+        </div>
+        <div class="products">
+
+        </div>
+    </div>
 
 
 
@@ -159,7 +183,7 @@
 
 
 
-   
+
 
 
 
@@ -197,7 +221,7 @@
                     <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
                     <path d="M16.5 7.5v.001"></path>
                   </svg></a></li>
-                
+
             </ul>
         </div>
         <div class="Pages" id="it-3">
@@ -219,13 +243,14 @@
             <h4>Maps Location</h4>
             <img src="images/shanghahay.png">
         </div>
-         
+
         <p id="it-5">&copy;Copyright. Designed And Developed By Jelouani</p>
 
     </section>
-    
+
 
 
     <script src="css/script.js"></script>
 </body>
+
 </html>
