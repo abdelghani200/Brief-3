@@ -1,14 +1,22 @@
 .cart ion-icon {
     vertical-align: bottom;
-    font-size: 20px;
+    font-size: 30px;
     padding-right: 5px;
 }
 
 .cart a {
-    background-color: coral;
+    background-color: black;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    padding: 2rem;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.cart{
+    text-align: center;
+    margin-top: 2rem;
+    
 }
 
 
@@ -20,7 +28,13 @@
     margin: 0 auto;
     margin-top: 60px;
 }
-
+.products-container ion-icon{
+   font-size: 25px;
+   color: blue;
+   margin-left: 10px;
+   margin-right: 10px;
+   cursor: pointer;
+}
 .product-header {
     width: 100%;
     max-width: 650px;
