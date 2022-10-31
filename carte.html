@@ -26,7 +26,7 @@
                 <li><a href="propos.html" class="nav-item">A propos</a></li>
                 <li><a href="contact.html" class="nav-item">Contact</a></li>
             </ul>
-            
+
             <div id="hamberger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -43,19 +43,21 @@
     <div class="select">
         <p id="select-title">Select Your Choice</p>
         <select id="type-menu">
-                <option value="1"><label class="type">All</label></option>
-                <option value="2"><label>Salade</label></option>
-                <option value="3"><label>Plats</label></option>
-                <option value="4"><label>Obento</label></option>
-            </select>
+                    <option value="1" class = "category-title A4" ><label  class="type" id="category-select" >All</label></option>  
+                    <option value="2" class="category-title A1"><label >Salade</label></option>           
+                    <option value="3" class="category-title A2"><label >Plats</label></option>               
+                    <option value="4" class="category-title A3"><label >Obento</label></option>            
+        </select>
+
     </div>
+
     <div class="cart">
         <a href="carte.html">
             <ion-icon name="basket"></ion-icon>Cart<span>0</span>
         </a>
     </div>
     <section class="menu">
-        <div class="menu-food">
+        <div class="menu-food all salades">
             <h1 id="plat-txt">Salades Menu</h1>
             <div class="cirlce">
                 <p>42$</p>
@@ -87,7 +89,7 @@
             <img class="circular--square" src="images/salade-de-chou-et-daikon-a-la-japonaise.jpeg">
         </div>
 
-        <div class="menu-food">
+        <div class="menu-food all plats">
             <h1 id="plat-txt">Plats Menu</h1>
             <div class="cirlce">
                 <p>42$</p>
@@ -122,7 +124,7 @@
 
         </div>
 
-        <div class="menu-food">
+        <div class="menu-food all obento">
             <h1 id="plat-txt">Obento Menu</h1>
             <div class="cirlce">
                 <p>42$</p>
@@ -135,24 +137,24 @@
             <img class="circular--square" src="images/obento- art culinaire.jpg">
             <img class="circular--square" src="images/Obento Box Guide.jpg">
             <div class="form-13">
-                <div class="fop-1" class="box">
+                <div class="fop-1">
                     <p>salade concombre soja poivron</p>
                     <a href="#" id="btn-menu" class="add-cart cart1">Add to cart</a>
                 </div>
-                <div class="fop-2" class="box">
+                <div class="fop-2">
                     <p>salade de chou blanc et carotte</p>
                     <a href="#" id="btn-menu" class="add-cart cart2">Add to cart</a>
                 </div>
-                <div class="fop-3" class="box">
+                <div class="fop-3">
                     <p id="salade-algue">salade d'algues </p>
                     <a href="#" id="btn-menu" class="add-cart cart3">Add to cart</a>
                 </div>
-                <div class="fop-4" class="box">
+                <div class="fop-4">
                     <p id="salade-chou">salade de chou et daikon </p>
                     <a href="#" id="btn-menu" class="add-cart cart4">Add to cart</a>
                 </div>
             </div>
-
+        </div>
     </section>
 
 
