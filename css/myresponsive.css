@@ -1,0 +1,301 @@
+@media screen and (max-width:767px){
+    #hamberger {
+        display: block;
+        margin-left: 6%;
+    }
+    #hamberger.active{
+        margin-left: 6%;
+    }
+    
+    header .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container .show {
+        display: none;
+    
+    }
+    .container .active {
+        display: block;
+        justify-content: space-between;
+    }
+    .menu-nav2{
+        /* height: 400px; */
+        display: block;
+        flex-direction: column;
+        background-color: rgb(191, 191, 195);
+        padding: 10%;
+        border-radius: 10px;
+        position: absolute;
+        margin-top: 11%;
+        margin-left: -78%;
+    }
+
+    
+    header .container .search_shop input {
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 5px 20px;
+    }
+        
+    .Accuiel{
+        display: flex;
+        flex-direction: column;
+        padding: 11rem;
+        width: 100%;
+        gap: 10rem;
+    
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .Accuiel .welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+    
+    .suchi-1{
+        display: flex;
+        flex-direction: column;
+       
+    }
+        
+    .Accuiel .suchi-1 .sushi-1-text h6{
+        display: flex;
+        font-weight: 777;
+        font-size: 23px;
+    }
+
+    /* footer */
+    #it-1 {
+        grid-column: 1 / 2;
+    }
+    #it-2 {
+        grid-column: 2 / 4;
+    }
+    #it-3 {
+        grid-row: 3 / 2;
+    }
+    #it-4 {
+        grid-column: 4 / 3;
+    }
+    #it-5 {
+        grid-column: 1/4;
+    }
+    #ul-contact {
+        padding-left: 4rem;
+    }
+    .Pages img {
+        width: 200px;
+        height: 100px;
+        padding-right: 1.5rem;
+    }
+
+    /* search */
+    .search{
+       padding-left: 3rem;
+    }
+
+    header .container .search_shop {
+        display: flex;
+        /* gap: 4rem; */
+    }
+
+    /* contact */
+
+        
+    .formation-contact{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+        
+    textarea {
+        width: 400px;
+        height: 230px;
+    }
+    
+    button {
+        width: 200px;
+        height: 50px;
+    }
+    .msg-btn{
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* propos */
+
+    .propos .propos-text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .team .images-team{
+        text-align: center;
+    }
+
+    header .container .search_shop  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         gap: 0rem; 
+    }
+/*         
+    header .container .search_shop  {
+        display: flex;
+        gap: 4rem;
+    } */
+        
+   
+
+
+}
+
+
+@media screen and (min-width:767px) and (max-width:999px){
+
+
+      /* header */
+    #hamberger {
+        display: block;
+        margin-left: 6%;
+    }
+    #hamberger.active{
+        margin-left: 6%;
+    }  
+     
+      header .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .container .show {
+        display: none;
+    
+    }
+    .container .active {
+        display: block;
+        justify-content: space-between;
+    }
+    .menu-nav2{
+        /* height: 400px; */
+        display: block;
+        flex-direction: column;
+        background-color: rgb(191, 191, 195);
+        padding: 10%;
+        border-radius: 10px;
+        position: absolute;
+        margin-top: 7%;
+        margin-left: -78%;
+    }
+
+    
+    header .container .search_shop input {
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 5px 20px;
+    }
+    .search{
+        padding-left: 3rem;
+    }
+ 
+     header .container .search_shop {
+         display: flex;
+         /* gap: 4rem; */
+     }    
+        
+    header .container {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    header .container .search_shop  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         gap: 0rem; 
+    }
+
+
+
+
+
+   /* contact */
+    .formation-contact{
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .msg-btn{
+        width: auto;
+    }
+
+    .formation-pers{
+        width: auto;
+    }
+   /* contact end  */
+   
+   /* Accuiel */
+      
+   .Accuiel{
+    display: flex;
+    flex-direction: column;
+    padding: 11rem;
+    width: auto;
+    height: auto;
+    gap: 10rem;
+    }
+    .suchi-1{
+        width: auto;
+        height: auto;
+    }
+    .Accuiel .welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+    
+    .Accuiel .suchi-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    /* Accuiel   end*/
+
+
+    /* propos */
+    .propos-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

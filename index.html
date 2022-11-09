@@ -1,67 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hikata</title>
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/myresponsive.css">
+    <title>Hitaka Restaurent</title>
 </head>
-
 <body>
-    <section id="navbar" class="accueil">
-        <nav class="menu-nav" id="header">
-            <img src="images/logo-hitaka.png" id="logo" class="logo-1" class="active">
 
-
-            <ul class="nav2-menu">
-                <li><a href="index.html" class="nav-item">Accuiel</a></li>
-                <li><a href="carte.html" class="nav-item">Catre</a></li>
-                <li><a href="propos.html" class="nav-item">A propos</a></li>
-                <li><a href="contact.html" class="nav-item">Contact</a></li>
-            </ul>
+    <!-- header Start -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                
+                <a href="./index.html"><img src="images/logo-hitaka.png" alt="" width="100px" class="active"></a>
+            </div>
+            <div class="nav_bar show" id="nav_bar_list">
+                <ul class="menu-nav2">
+                    <li><a href="./index.html">Accuiel</a></li>
+                    <li><a href="./carte.html">Catre</a></li>
+                    <li><a href="./propos.html">A propos</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="search_shop">
+                <div class="search">
+                    <input type="search" placeholder="search..">
+                </div>
+                <div class="shop">
+                    <img src="./images/icon-cart.svg" alt=""  id="menu_cart">
+                </div>
+            </div>
             <div id="hamberger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-        </nav>
-        <div class="content">
-            <div class="text">
-                <h3>Welcome To</h3>
-                <h2><span>H</span>itaka <span>S</span>ushi <span>R</span>estaurant</h2>
-                <p>
-                    <pre> 
-    Hitaka Sushi is an Asian restaurant located in the
+            <div class="nav_bar_icon">
+                <img src="./images/icons/icon-menu.svg" alt="" id="nav_bar_icon">
+            </div>
+        </div>
+        <!-- shop items -->
+        <!-- <section class="shop_items close_cart" id="shop_items">
+            
+            <strong class="total" id="total">Total : </strong>
+            <div class="buy_now">
+                <button>Buy Now</button>
+            </div>
+        </section> -->
+        <!-- end shop items -->
+    </header>
+    <!-- header end -->
 
- district of shanghai, china. Specialized in
-                    
- Japanese and Thai cuisine, we offer
-                    
- the best Sushi in our space.
-                    </pre>
-                </p>
-                <div class="btn">
-                    <a href="#" class="btn-1">See the Menu</a>
-                    <a href="#" class="btn-2">Contact Us</a>
+    <!-- home content start -->
+    <section class="Accuiel" >
+        
+            <div class="welcome">
+                <div class="sidbar-1">
+                    <div class="text-Accuiel">
+                        <h3>Welcome To</h3>
+                        <h2><span>H</span>itaka <span>S</span>ushi <span>R</span>estaurant</h2>
+                        <p>
+                            <pre> 
+    Hitaka Sushi is an Asian restaurant located in the
+        
+district of shanghai, china. Specialized in
+                            
+Japanese and Thai cuisine, we offer
+                            
+the best Sushi in our space.
+                            </pre>
+                        </p>
+                      </div>
+                    <div class="btn">
+                        <a href="#" class="btn-1">See the Menu</a>
+                        <a href="#" class="btn-2">Contact Us</a>
+                    </div>
+                </div>    
+                    <div class="image-index">
+                        <img src="images/sushi1.png">
+                    </div>
+                
+            </div>
+            <div class="suchi-1">
+                <img src="images/gif-sushi.gif">
+                <div class="sushi-1-text">
+                    <h6>Magical <span>Atmosphere</span></h6>
+                    <h6>Best Food <span>Quality</span></h6>
+                    <h6>Low Costing <span>Food</span></h6>
                 </div>
             </div>
-            <img src="images/sushi1.png">
-        </div>
+        
     </section>
+    <!-- end home page -->
 
-    <div class="suchi-1">
-        <img src="images/gif-sushi.gif">
-        <div class="sushi-1-text">
-            <h6>Magical <span>Atmosphere</span></h6>
-            <h6>Best Food <span>Quality</span></h6>
-            <h6>Low Costing <span>Food</span></h6>
-        </div>
-    </div>
-    <section class="footer">
+
+
+
+
+    <footer>
         <div class="Pages" id="it-1">
             <h4>Pages</h4>
             <ul>
@@ -117,12 +158,9 @@
 
         <p id="it-5">&copy;Copyright. Designed And Developed By Jelouani</p>
 
-    </section>
+    </footer>
 
 
-    <script src="https://example.com/fontawesome/v5.15.4/js/all.js" data-auto-a11y="true"></script>
-
-    <script src="css/script.js"></script>
 </body>
-
+        <script src="css/script.js"></script>
 </html>

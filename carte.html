@@ -1,171 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hikata</title>
-
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/rescarte.css">
-    <link rel="stylesheet" href="css/styleShop.css">
+    <link rel="stylesheet" href="css/myresponsive.css">
+    <title>Hitaka Restaurent</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <section id="navbar" class="accueil">
-        <nav class="menu-nav" id="header">
-            <img src="images/logo-hitaka.png" id="logo" class="logo-1" classe="active">
-            <ul class="nav2-menu">
-                <li><a href="index.html" class="nav-item">Accuiel</a></li>
-                <li><a href="carte.html" class="nav-item">Catre</a></li>
-                <li><a href="propos.html" class="nav-item">A propos</a></li>
-                <li><a href="contact.html" class="nav-item">Contact</a></li>
-            </ul>
 
+    <!-- header Start -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                
+                <a href="./index.html"><img src="images/logo-hitaka.png" alt="" width="100px" class="active"></a>
+            </div>
+            <div class="nav_bar show" id="nav_bar_list">
+                <ul class="menu-nav2">
+                    <li><a href="./index.html">Accuiel</a></li>
+                    <li><a href="./menu.html">Catre</a></li>
+                    <li><a href="./propos.html">A propos</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="search_shop">
+                <div class="search">
+                    <input type="search" placeholder="search..">
+                </div>
+                <div class="shop" href="carte.html">
+                    <img src="./images/icon-cart.svg" alt=""  id="menu_cart" class="crt"><sup>0</sup>
+                </div>
+            </div>
             <div id="hamberger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-        </nav>
-    </section>
-
-    <div class="carte">
+            <div class="nav_bar_icon">
+                <img src="./images/icon-menu.svg" alt="" id="nav_bar_icon">
+            </div>
+        </div>
+        <!-- shop items -->
+        <!-- <section class="shop_items close_cart" id="shop_items">
+            
+            <strong class="total" id="total">Total : </strong>
+            <div class="buy_now">
+                <button>Buy Now</button>
+            </div>
+        </section> -->
+        <!-- end shop items -->
+    </header>
+    <!-- header end -->
+    
+    <div class="carte-p-carte">
         <h5>Catre</h5>
         <img src="images/15.webp">
     </div>
+    <div class="carte-page">
 
-    <div class="select">
-        <p id="select-title">Select Your Choice</p>
-        <select id="type-menu">
-                    <option value="1" class = "category-title A4" ><label  class="type" id="category-select" >All</label></option>  
-                    <option value="2" class="category-title A1"><label >Salade</label></option>           
-                    <option value="3" class="category-title A2"><label >Plats</label></option>               
-                    <option value="4" class="category-title A3"><label >Obento</label></option>            
-        </select>
+        <div class="select">
+            <p id="select-title">Select Your Choice</p>
+            <select class="list" id="Category">
+                <option value="" class="inlineA A4">All</option>
+                <option value="" class="inlineA A1">Salades</option>
+                <option value="" class="inlineA A2">Plats</option>
+                <option value="" class="inlineA A3">Obentos</option>
+            </select>
+        </div>
+
+        
+        <div class="content-cart">          
+            <div class="box_flex">
+                <div class="toutes-salade">
+
+                    <div class="box All salade">
+                        <div class="box_img">
+                            <img class="circular--square" src="images/salade-concombresojapoivron-a-la-japonaise--278713p453800.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>concombre soja poivron</h3>
+                            <hr>
+                            <section>$28.00</section>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        </div>
+                    </div>
+    
+                    <div class="box All salade">
+                        <div class="box_img">
+                            <img class="circular--square" src="images/salade_de_chou_blanc_et_carotte.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>chou blanc et carotte</h3>
+                            <hr>
+                            <section>$38.00</section>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                            <!-- <article>Category: Featured</article> -->
+                        </div>
+                    </div>
+    
+                    <div class="box All salade">
+                        <div class="box_img">
+                            <img class="circular--square" src="images/salade d'algues.webp">
+                        </div>
+                        <div class="text">
+                            <h3>salade d'algues</h3>
+                            <hr>
+                            <section>$48.00</section>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                            <!-- <article>Category: Featured</article> -->
+                        </div>
+                    </div>
+    
+                    <div class="box All salade">
+                        <div class="box_img">
+                            <img class="circular--square" src="images/salade-de-chou-et-daikon-a-la-japonaise.jpeg">
+                        </div>
+                        <div class="text">
+                            <h3>salade de chou et daikon</h3>
+                            <hr>
+                            <section>$28.00</section>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                            <!-- <article>Category: Featured</article> -->
+                        </div>
+                    </div>
+    
+                </div>
+                
+               <div class="tout-plats">
+                <div class="box All plats">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/Gyoza.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Gyoza</h3>
+                        <hr>
+                        <section>$30.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Special</article> -->
+                    </div>
+                </div>
+                <div class="box All plats">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/Okonomiyaki.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Okonomiyaki</h3>
+                        <hr>
+                        <section>$38.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Special</article> -->
+                    </div>
+                </div>
+                <div class="box All plats">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/Yakitori.png">
+                    </div>
+                    <div class="text">
+                        <h3>Yakitori</h3>
+                        <hr>
+                        <section>$48.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Special</article> -->
+                    </div>
+                </div>
+                <div class="box All plats">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/Tonkatsu.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Tonkatsu</h3>
+                        <hr>
+                        <section>$37.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Special</article> -->
+                    </div>
+                </div>
+               </div>
+
+
+               <div class="tout-obento">
+                
+                <div class="box All obento">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/Gyoza.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Gyoza Obento</h3>
+                        <hr>
+                        <section>$50.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Arrivals</article> -->
+                    </div>
+                </div>
+
+                <div class="box All obento">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/Osaka Cooking Class.png">
+                    </div>
+                    <div class="text">
+                        <h3>Osaka Cooking</h3>
+                        <hr>
+                        <section>$28.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Arrivals</article> -->
+                    </div>
+                </div>
+
+                <div class="box All obento">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/obento- art culinaire.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Obento art culinaire</h3>
+                        <hr>
+                        <section>$70.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Arrivals</article> -->
+                    </div>
+                </div>
+                <div class="box All obento">
+                    <div class="box_img">
+                        <img class="circular--square" src="images/Obento Box Guide.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Obento box Guide</h3>
+                        <hr>
+                        <section>$286.00</section>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" id="btn-cart" class="add-cart">Add To Cart</a>
+                        <!-- <article>Category: Arrivals</article> -->
+                    </div>
+                </div>
+               </div>
+
+            </div>
+
+        </div>
+
 
     </div>
-
-    <div class="cart">
-        <a href="carte.html">
-            <ion-icon name="basket"></ion-icon>Cart<span>0</span>
-        </a>
-    </div>
-    <section class="menu">
-        <div class="menu-food all salades">
-            <h1 id="plat-txt">Salades Menu</h1>
-            <div class="cirlce">
-                <p>42$</p>
-                <p>42$</p>
-                <p>42$</p>
-                <p>42$</p>
-            </div>
-            <div class="form-12" id="salade">
-                <div class="box">
-                    <p>salade concombre soja poivron</p>
-                    <a href="#" id="btn-menu" class="add-cart cart1">Add to cart</a>
-                </div>
-                <div class="box">
-                    <p>salade de chou blanc et carotte</p>
-                    <a href="#" id="btn-menu" class="add-cart cart2">Add to cart</a>
-                </div>
-                <div class="box">
-                    <p id="salade-algue">salade d'algues </p>
-                    <a href="#" id="btn-menu" class="add-cart cart3">Add to cart</a>
-                </div>
-                <div class="box">
-                    <p id="salade-chou">salade de chou et daikon </p>
-                    <a href="#" id="btn-menu" class="add-cart cart4">Add to cart</a>
-                </div>
-            </div>
-            <img class="circular--square" src="images/salade-concombresojapoivron-a-la-japonaise--278713p453800.jpg">
-            <img class="circular--square" src="images/salade_de_chou_blanc_et_carotte.jpg">
-            <img class="circular--square" src="images/salade d'algues.webp">
-            <img class="circular--square" src="images/salade-de-chou-et-daikon-a-la-japonaise.jpeg">
-        </div>
-
-        <div class="menu-food all plats">
-            <h1 id="plat-txt">Plats Menu</h1>
-            <div class="cirlce">
-                <p>42$</p>
-                <p>42$</p>
-                <p>42$</p>
-                <p>42$</p>
-            </div>
-
-            <img class="circular--square" src="images/Gyoza.jpg">
-            <img class="circular--square" src="images/Okonomiyaki.jpg">
-            <img class="circular--square" src="images/Yakitori.png">
-            <img class="circular--square" src="images/Tonkatsu.jpg">
-
-            <div class="form-13">
-                <div class="f-1">
-                    <p>salade concombre soja poivron</p>
-                    <a href="#" id="btn-menu">Add to cart</a>
-                </div>
-                <div class="f-2">
-                    <p>salade de chou blanc et carotte</p>
-                    <a href="#" id="btn-menu">Add to cart</a>
-                </div>
-                <div class="f-3">
-                    <p id="salade-algue">salade d'algues </p>
-                    <a href="#" id="btn-menu">Add to cart</a>
-                </div>
-                <div class="f-4">
-                    <p id="salade-chou">salade de chou et daikon </p>
-                    <a href="#" id="btn-menu">Add to cart</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="menu-food all obento">
-            <h1 id="plat-txt">Obento Menu</h1>
-            <div class="cirlce">
-                <p>42$</p>
-                <p>42$</p>
-                <p>42$</p>
-                <p>42$</p>
-            </div>
-            <img class="circular--square" src="images/Gyoza.jpg">
-            <img class="circular--square" src="images/Osaka Cooking Class.png">
-            <img class="circular--square" src="images/obento- art culinaire.jpg">
-            <img class="circular--square" src="images/Obento Box Guide.jpg">
-            <div class="form-13">
-                <div class="fop-1">
-                    <p>salade concombre soja poivron</p>
-                    <a href="#" id="btn-menu" class="add-cart cart1">Add to cart</a>
-                </div>
-                <div class="fop-2">
-                    <p>salade de chou blanc et carotte</p>
-                    <a href="#" id="btn-menu" class="add-cart cart2">Add to cart</a>
-                </div>
-                <div class="fop-3">
-                    <p id="salade-algue">salade d'algues </p>
-                    <a href="#" id="btn-menu" class="add-cart cart3">Add to cart</a>
-                </div>
-                <div class="fop-4">
-                    <p id="salade-chou">salade de chou et daikon </p>
-                    <a href="#" id="btn-menu" class="add-cart cart4">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
 
 
     <div class="products-container">
@@ -179,14 +342,9 @@
 
         </div>
     </div>
-
-
-
-
-
-
-    <!--footer-->
-    <section class="footer">
+    
+   <!-- footer -->
+    <footer>
         <div class="Pages" id="it-1">
             <h4>Pages</h4>
             <ul>
@@ -242,14 +400,13 @@
 
         <p id="it-5">&copy;Copyright. Designed And Developed By Jelouani</p>
 
-    </section>
-
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-    <script src="css/script.js"></script>
-
+    </footer>
 
 
 </body>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
+      
+<script src="css/script.js"></script>
+   
 </html>
