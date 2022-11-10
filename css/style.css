@@ -605,7 +605,7 @@ button:hover {
     width: 45%;
 }
 
-.price {
+.price , .bht .price{
     width: 15%;
     display: flex;
     align-items: center;
@@ -618,13 +618,13 @@ button:hover {
 }
 
 .quanttity {
-    width: 30%;
+    width: 22%;
     border-bottom: 1px solid lightgray;
     display: flex;
     align-items: center;
 }
 
-.product {
+.product{
     width: 45%;
     display: flex;
     justify-content: space-around;
@@ -644,6 +644,7 @@ button:hover {
     flex-wrap: wrap;
 }
 
+
 .basketTotalCont {
     display: flex;
     justify-content: flex-end;
@@ -657,4 +658,9 @@ button:hover {
 
 .basketTotal {
     width: 10%;
+}
+
+.bht{
+    display: flex;
+    gap: 5rem;
 }

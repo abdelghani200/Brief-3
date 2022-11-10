@@ -198,20 +198,22 @@ function displayCart() {
         maklacont.innerHTML = '';
         Object.values(cartItems).map(item => {
             maklacont.innerHTML += `
+        <div class=bht>
             <div class="product">
                 <ion-icon name="close-circle" class="close11"></ion-icon>
                 <img src="${item.imgfood}" class="circular--square" id="img-acht">
                 <span>${item.name}</span>
             </div>
-            <div class="price">${item.price}</div>
+            <div class="price" class="close11">${item.price}</div>
             <div class="quanttity">
-            <ion-icon class="decrease"
-            name ="arrow-dropleft-circle"></ion-icon>
-            <span>${item.num}</span>
-            <ion-icon class="increase"
-            name ="arrow-dropright-circle"></ion-icon>
+                <ion-icon class="decrease"
+                name ="arrow-dropleft-circle" class="close11"></ion-icon>
+                <span class="qtt-1">${item.num}</span>
+                <ion-icon class="increase"
+                name ="arrow-dropright-circle" class="close11"></ion-icon>
             </div>
-            <div class="total">${item.num * item.price}</div>
+            <div class="total" class="close11">${item.num * item.price}</div>
+        </div> 
             `;
         });
         maklacont.innerHTML += `
@@ -226,3 +228,33 @@ function displayCart() {
 displayCart();
 
 
+var removeCartItemButtons = document.getElementsByClassName('close11');
+console.log(removeCartItemButtons);
+
+for(var i=0;i< removeCartItemButtons.length;i++){
+    var button =removeCartItemButtons[i];
+    button.addEventListener('click',function(event){
+        var buttonClicked = event.target
+        buttonClicked.parentElement.parentElement.remove()
+    })
+
+}
+
+var incrementButton =document.getElementsByName('arrow-dropright-circle');
+console.log(incrementButton);
+var decrementButton =document.getElementsByName('arrow-dropleft-circle');
+console.log(decrementButton);
+for(var i=0;i<incrementButton.length;i++){
+    var Button =incrementButton[i];
+    Button.addEventListener('click',function(event){
+        var ButtonClicked= event.target;
+        // console.log(ButtonClicked);
+        var qtt = document.getElementsByClassName('qtt-1');
+        // console.log(qtt);
+        var htf = ButtonClicked.parentElement;
+        console.log(htf);
+
+        var souf = span.value;
+        console.log(souf);
+    })
+}
