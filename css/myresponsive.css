@@ -103,7 +103,7 @@
 
     /* search */
     .search{
-       padding-left: 3rem;
+       padding-left: 1rem;
     }
 
     header .container .search_shop {
@@ -213,7 +213,7 @@
         padding: 5px 20px;
     }
     .search{
-        padding-left: 3rem;
+        padding-left: 1rem;
     }
  
      header .container .search_shop {
@@ -299,3 +299,11 @@
     }
 
 }
+
+
+/* (D) RESPONSIVE  cart */
+@media screen and (max-width: 640px) {
+    #cart-products {
+      grid-template-columns: 100%;
+    }
+  }
