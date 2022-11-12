@@ -21,240 +21,75 @@ document.querySelector("#hamberger").addEventListener("click", function() {
 
 // filter
 
-document.querySelector(".A1").addEventListener("click", function () {
-    document.querySelector(".toutes-salade").style.display = "flex";
-    document.querySelector(".tout-plats").style.display = "none";
-    document.querySelector(".tout-obento").style.display = "none";
-})
-document.querySelector(".A2").addEventListener("click", function () {
-    document.querySelector(".toutes-salade").style.display = "none";
-    document.querySelector(".tout-plats").style.display = "flex";
-    document.querySelector(".tout-obento").style.display = "none";
-})
-document.querySelector(".A3").addEventListener("click", function () {
-    document.querySelector(".toutes-salade").style.display = "none";
-    document.querySelector(".tout-plats").style.display = "none";
-    document.querySelector(".tout-obento").style.display = "flex";
-})
-// for show all
-document.querySelector(".A4").addEventListener("click", function () {
-    document.querySelector(".toutes-salade").style.display = "flex";
-    document.querySelector(".tout-plats").style.display = "flex";
-    document.querySelector(".tout-obento").style.display = "flex";
-})
+ var dish_options = document.getElementById("Category");
+ var dishes = document.getElementsByClassName("p-item");
+
+// dish_options.addEventListener("change", (e) => {
+//   let selected_dish = e.target.value;
+//   console.log(selected_dish);
+//   for (const dish of dishes) {
+//     if (selected_dish == "all") {
+//         console.log("all");
+//       dish.style.display="unset";
+//     } else if (dish.type === selected_dish) {
+//         console.log("dish.type");
+//         dish.style.display="unset";
+//     } else {
+//         dish.style.display="none";
+//     }
+//   }
+// });
+
+// ////////////////////////////
+
+dish_options.addEventListener("change", (e) => {
+  let selected_dish = e.target.value;
+  console.log(selected_dish);
+  for (const dish of dishes) {    
+    if (selected_dish == "all") {
+        // dish.classList.remove("hide");
+        dish.style.display="unset";
+        
+    } else if (dish.className.includes(selected_dish)) {
+        // dish.classList.remove("hide");
+        dish.style.display="unset";
+    } else {
+        // dish.classList.add("hide");
+        dish.style.display="none";
+      }
+  }
+});
+
+
+
+
+
+
+
+
 
 // hhhhhhhhhhhh
 
 
 
-let carts = document.querySelectorAll('.add-cart');
-
-
-let maklas = [{
-        name: 'salade concombre soja poivron',
-        price: 42,
-        imgfood: "images/salade-concombresojapoivron-a-la-japonaise--278713p453800.jpg",
-        num: 0,
-    },
-    {
-        name: 'salade de chou blanc et carotte',
-        price: 40,
-        imgfood: "images/salade_de_chou_blanc_et_carotte.jpg",
-        num: 0,
-    },
-    {
-        name: 'salade dalgues',
-        price: 46,
-        imgfood: "images/salade d'algues.webp",
-        num: 0,
-    },
-    {
-        name: 'salade de chou et daikon',
-        price: 54,
-        imgfood: "images/salade-de-chou-et-daikon-a-la-japonaise.jpeg",
-        num: 0,
-    },
-    {
-        name: 'Plat Gyoza',
-        price: 42,
-        imgfood: "images/Gyoza.jpg",
-        num: 0,
-    }, {
-      
-        name: 'Plat Okonomiyaki',
-        price: 40,
-        imgfood: "images/Okonomiyaki.jpg",
-        num: 0,
-    }, {
-       
-        name: 'Plat Yakitori',
-        price: 46,
-        imgfood: "images/Yakitori.png",
-        num: 0,
-    }, {
-       
-        name: 'Plat Tonkatsu',
-        price: 54,
-        imgfood: "images/Tonkatsu.jpg",
-        num: 0,
-    },
-
-
-    {
-      
-        name: 'Gyoza',
-        price: 42,
-        imgfood: "images/Gyoza.jpg",
-        num: 0,
-    }, {
-        
-        name: 'Osaka Cooking Class',
-        price: 40,
-        imgfood: "images/Osaka Cooking Class.png",
-        num: 0,
-    }, {
-        
-        name: 'Obento art culinaire',
-        price: 46,
-        imgfood: "images/obento- art culinaire.jpg",
-        num: 0,
-    }, {
-       
-        name: 'Box Guide',
-        price: 54,
-        imgfood: "images/Obento Box Guide.jpg",
-        num: 0,
-    },
-
-
-]
-
-
-
-
-for (let i = 0; i < carts.length; i++) {
-    carts[i].addEventListener('click', () => {
-        cartNumbers(maklas[i]);
-        totalprix(maklas[i])
-    })
-}
-
-function cartNumbers(makla) {
-    console.log("the product clicked is", makla);
-    let maklas = localStorage.getItem('cartNumbers');
-    maklas = parseInt(maklas)
-
-    if (maklas) {
-        localStorage.setItem('cartNumbers', maklas + 1);
-        document.querySelector('.shop sup').textContent = maklas + 1;
-    } else {
-        localStorage.setItem('cartNumbers', 1);
-        document.querySelector('.shop sup').textContent = 1;
-    }
-    setItem(makla);
-}
-
-function setItem(makla) {
-    let cartItems = localStorage.getItem('maklasNum');
-    cartItems = JSON.parse(cartItems);
-    if (cartItems != null) {
-        if (cartItems[makla.name] == undefined) {
-            cartItems = {
-                ...cartItems,
-                [makla.name]: makla
-            }
-        }
-        console.log(cartItems[makla.name]);
-        cartItems[makla.name].num += 1;
-    } else {
-        makla.num = 1;
-        cartItems = {
-            [makla.name]: makla
-        }
-    }
-
-    localStorage.setItem("maklasNum", JSON.stringify(cartItems));
-}
-
-
-function totalprix(makla) {
-    //console.log("The product price is", maklas.price);
-    let catkot = localStorage.getItem('totalprix');
-
-    if (catkot != null) {
-        catkot = parseInt(catkot);
-        localStorage.setItem("totalprix", catkot + makla.price);
-    } else {
-        localStorage.setItem("totalprix", makla.price);
-    }
-}
-
-function displayCart() {
-    let cartItems = localStorage.getItem("maklasNum");
-    cartItems = JSON.parse(cartItems);
-    let maklacont = document.querySelector(".products");
-    let catkot = localStorage.getItem('totalprix');
-    if (cartItems && maklacont) {
-        maklacont.innerHTML = '';
-        Object.values(cartItems).map(item => {
-            maklacont.innerHTML += `
-        <div class=bht>
-            <div class="product">
-                <ion-icon name="close-circle" class="close11"></ion-icon>
-                <img src="${item.imgfood}" class="circular--square" id="img-acht">
-                <span>${item.name}</span>
-            </div>
-            <div class="price" class="close11">${item.price}</div>
-            <div class="quanttity">
-                <ion-icon class="decrease"
-                name ="arrow-dropleft-circle" class="close11"></ion-icon>
-                <span class="qtt-1">${item.num}</span>
-                <ion-icon class="increase"
-                name ="arrow-dropright-circle" class="close11"></ion-icon>
-            </div>
-            <div class="total" class="close11">${item.num * item.price}</div>
-        </div> 
-            `;
-        });
-        maklacont.innerHTML += `
-         <div class="basketTotalCont">
-         <h4 class="basketTotaltitle">Prix Total</h4>
-         <h4 class="basketTotal">${catkot}</h4>
-         `;
-
-    }
-
-}
-displayCart();
-
-
-var removeCartItemButtons = document.getElementsByClassName('close11');
-console.log(removeCartItemButtons);
-
-for(var i=0;i< removeCartItemButtons.length;i++){
-    var button =removeCartItemButtons[i];
-    button.addEventListener('click',function(event){
-        var buttonClicked = event.target
-        buttonClicked.parentElement.parentElement.remove()
-    })
-
-}
-
-var incrementButton =document.getElementsByName('arrow-dropright-circle');
-console.log(incrementButton);
-var decrementButton =document.getElementsByName('arrow-dropleft-circle');
-console.log(decrementButton);
-for(var i=0;i<incrementButton.length;i++){
-    var Button =incrementButton[i];
-    Button.addEventListener('click',function(event){
-        var ButtonClicked= event.target;
-        // console.log(ButtonClicked);
-        var qtt = document.getElementsByClassName('qtt-1');
-        // console.log(qtt);
-        var htf = ButtonClicked.parentElement;
-        console.log(htf);
-
-        var souf = span.value;
-        console.log(souf);
-    })
-}
+// document.querySelector(".A1").addEventListener("click", function () {
+//     document.querySelector(".toutes-salade").style.display = "flex";
+//     document.querySelector(".tout-plats").style.display = "none";
+//     document.querySelector(".tout-obento").style.display = "none";
+// })
+// document.querySelector(".A2").addEventListener("click", function () {
+//     document.querySelector(".toutes-salade").style.display = "none";
+//     document.querySelector(".tout-plats").style.display = "flex";
+//     document.querySelector(".tout-obento").style.display = "none";
+// })
+// document.querySelector(".A3").addEventListener("click", function () {
+//     document.querySelector(".toutes-salade").style.display = "none";
+//     document.querySelector(".tout-plats").style.display = "none";
+//     document.querySelector(".tout-obento").style.display = "flex";
+// })
+// // for show all
+// document.querySelector(".A4").addEventListener("click", function () {
+//     document.querySelector(".toutes-salade").style.display = "flex";
+//     document.querySelector(".tout-plats").style.display = "flex";
+//     document.querySelector(".tout-obento").style.display = "flex";
+// })

@@ -13,12 +13,17 @@ var cart = {
   
   load : () => {
     cart.items = localStorage.getItem("cart");
-    if (cart.items == null) { cart.items = {}; }
-    else { cart.items = JSON.parse(cart.items); }
+    if (cart.items == null) {
+       cart.items = {}; 
+      }
+    else { 
+      cart.items = JSON.parse(cart.items); 
+    }
   },
 
   
-  nuke : () => { if (confirm("Empty cart?")) {
+  nuke : () => {
+     if (confirm("Empty cart?")) {
     cart.items = {};
     localStorage.removeItem("cart");
     cart.list();
@@ -32,18 +37,59 @@ var cart = {
 
     
     cart.hPdt.innerHTML = "";
-    let template = document.getElementById("template-product").content,
-        p, item, part;
+    let p;
+
+
+        
     for (let id in products) {
       p = products[id];
-      item = template.cloneNode(true);
-      item.querySelector(".p-img").src = cart.iURL + p.img;
-      item.querySelector(".p-name").textContent = p.name;
-      item.querySelector(".p-desc").textContent = p.desc;
-      item.querySelector(".p-price").textContent = "$" + p.price.toFixed(2);
-      item.querySelector(".p-add").onclick = () => { cart.add(id); };
-      cart.hPdt.appendChild(item);
+
+      
+      var produits = document.getElementById("cart-products");
+      var produit = document.createElement("div");
+      produit.classList.add("p-item");
+      produit.classList.add(p.type);
+      
+      var produitContent = `
+      <img class="p-img" src = "${cart.iURL + p.img}" />
+      <div class="p-name">${p.name}</div>
+      <div class="p-price">$ ${p.price.toFixed(2)}</div>
+      <button class="cart p-add">Add To Cart</button>
+      </div>
+      `;
+      produit.innerHTML = produitContent;
+
+      produit.querySelector(".p-add").onclick = () => { cart.add(id); };
+
+      produits.append(produit);
+      cart.hPdt.appendChild(produit);
     }
+
+
+
+    // let template = document.getElementById("template-product").content,
+    //     p, part;
+    //     console.log("trgt");
+    //     let item = document.querySelector("p-item").childElementCount;
+    //     console.log(item);
+    //     console.log("werve");
+
+
+
+
+    // for (let id in products) {
+    //   p = products[id];
+    //   item = template.cloneNode(true);
+    //   item.querySelector(".p-img").src = cart.iURL + p.img;
+    //   item.querySelector(".p-name").textContent = p.name;
+    //   item.querySelector(".p-item").className =  "p-item " + p.type;
+    //   item.querySelector(".p-price").textContent = "$" + p.price.toFixed(2);
+    //   item.querySelector(".p-add").onclick = () => { cart.add(id); };
+    //   // item.className.add(p.type);
+    //   item.classList.add("hh");
+    //   console.log(item.className);
+    //   cart.hPdt.appendChild(item);
+    // }
 
     
     cart.load();
