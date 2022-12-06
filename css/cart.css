@@ -104,4 +104,16 @@ input.cart, button.cart {
   width: 100%; 
 }
 
+@media screen and (max-width: 700px) {
+  #cart-products {
+    grid-template-columns: 100%;
+  }
 
+  #cart-wrap{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #cart-items{
+    width: 100%;
+  }
+}

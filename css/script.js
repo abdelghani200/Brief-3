@@ -4,10 +4,10 @@ document.querySelector("#hamberger").addEventListener("click", function() {
 
 })
 
-document.querySelector("#hamberger").addEventListener("click", function() {
-    // document.querySelector(".search").style.display = "none";
-    document.querySelector(".search").classList.toggle("active");
-})
+// document.querySelector("#hamberger").addEventListener("click", function() {
+//     // document.querySelector(".search").style.display = "none";
+//     document.querySelector(".search").classList.toggle("active");
+// })
 
 
 
@@ -21,40 +21,23 @@ document.querySelector("#hamberger").addEventListener("click", function() {
 
 // filter
 
- var dish_options = document.getElementById("Category");
+ var options = document.getElementById("Category");
  var dishes = document.getElementsByClassName("p-item");
 
-// dish_options.addEventListener("change", (e) => {
-//   let selected_dish = e.target.value;
-//   console.log(selected_dish);
-//   for (const dish of dishes) {
-//     if (selected_dish == "all") {
-//         console.log("all");
-//       dish.style.display="unset";
-//     } else if (dish.type === selected_dish) {
-//         console.log("dish.type");
-//         dish.style.display="unset";
-//     } else {
-//         dish.style.display="none";
-//     }
-//   }
-// });
 
-// ////////////////////////////
-
-dish_options.addEventListener("change", (e) => {
-  let selected_dish = e.target.value;
-  console.log(selected_dish);
+ options.addEventListener("change", (e) => {
+  let selected = e.target.value;
+  console.log(selected);
   for (const dish of dishes) {    
-    if (selected_dish == "all") {
-        // dish.classList.remove("hide");
+    if (selected == "all") {
+        
         dish.style.display="unset";
         
-    } else if (dish.className.includes(selected_dish)) {
-        // dish.classList.remove("hide");
+    } else if (dish.className.includes(selected)) {
+       
         dish.style.display="unset";
     } else {
-        // dish.classList.add("hide");
+        
         dish.style.display="none";
       }
   }

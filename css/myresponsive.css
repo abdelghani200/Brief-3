@@ -236,9 +236,20 @@
          gap: 0rem; 
     }
 
+    .Pages img {
+        width: 170px;
+        height: 100px;
+        margin-right: 17px;
+    }
 
+    #cart-wrap {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 
-
+    #cart-items{
+        width: 100%;
+    }
 
    /* contact */
     .formation-contact{

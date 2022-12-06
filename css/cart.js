@@ -1,23 +1,114 @@
+// les produits
+
+let products = [
+  {
+    type: "sushi",
+    name : "salade concombre soja poivron",
+    img : "salade-concombresojapoivron-a-la-japonaise--278713p453800.jpg",
+    price : 28
+  },
+  {
+    type: "sushi",
+    name : "salade de chou blanc et carotte",
+    img : "salade_de_chou_blanc_et_carotte.jpg",
+    price : 34
+  },
+  {
+    type: "sushi",
+    name : "salade de chou et daikon",
+    img : "salade-de-chou-et-daikon-a-la-japonaise.jpeg",
+    price : 67
+  },
+  {
+    type: "sushi",
+    name: "salade de chou et daikon",
+    img:"salade-de-chou-et-daikon-a-la-japonaise.jpeg",
+    price: 25,
+  },
+  {
+    type: "plat",
+    name : "Plat Gyoza",
+    img : "Gyoza.jpg",
+    price : 45
+  },
+  {
+    type: "plat",
+    name : "Plat Okonomiyaki",
+    img : "Okonomiyaki.jpg",
+    price : 43
+  },
+  {
+    type: "plat",
+    name : "Plat Yakitori",
+    img : "Yakitori.png",
+    price : 31
+  },
+  {
+    type: "plat",
+    name: 'Plat Tonkatsu',
+    img:"Tonkatsu.jpg",
+    price: 24,
+  },
+  {
+    type: "obento",
+    name : "Plat Gyoza",
+    img : "Gyoza.jpg",
+    price : 55
+  },
+  {
+    type: "obento",
+    name : "Osaka Cooking Class",
+    img : "Osaka Cooking Class.png",
+    price : 46
+  },
+  {
+    type: "obento",
+    name : "Obento art culinaire",
+    img : "obento- art culinaire.jpg",
+    price : 56
+  },
+  {
+    type: "obento",
+    name : "Box Guide",
+    img : "Obento Box Guide.jpg",
+    price : 34
+  }
+ 
+];
+ 
+
+
+
 var cart = {
  
-  hPdt : null,      
-  hItems : null,   
+  hPdt : "",      
+  hItems : "",   
   items : {},       
   iURL : "images/", 
-
+  
   
   save : () => {
-    localStorage.setItem("cart", JSON.stringify(cart.items));
+    localStorage.setItem("cart",JSON.stringify(cart.items));
+    
+    // console.log(cart);
+    // console.log(cart.items);
+    
   },
+
 
   
   load : () => {
     cart.items = localStorage.getItem("cart");
+    console.log(cart.items);
+
     if (cart.items == null) {
        cart.items = {}; 
+      //  console.log(cart.items);
       }
     else { 
       cart.items = JSON.parse(cart.items); 
+
+      // console.log(cart.items);
     }
   },
 
@@ -35,18 +126,18 @@ var cart = {
     cart.hPdt = document.getElementById("cart-products");
     cart.hItems = document.getElementById("cart-items");
 
-    
-    cart.hPdt.innerHTML = "";
+    // console.log();
+    // cart.hPdt.innerHTML = "";
     let p;
-
-
-        
+            
     for (let id in products) {
       p = products[id];
-
+      
       
       var produits = document.getElementById("cart-products");
+      console.log(produits);
       var produit = document.createElement("div");
+      //  console.log(produit);
       produit.classList.add("p-item");
       produit.classList.add(p.type);
       
@@ -67,30 +158,6 @@ var cart = {
 
 
 
-    // let template = document.getElementById("template-product").content,
-    //     p, part;
-    //     console.log("trgt");
-    //     let item = document.querySelector("p-item").childElementCount;
-    //     console.log(item);
-    //     console.log("werve");
-
-
-
-
-    // for (let id in products) {
-    //   p = products[id];
-    //   item = template.cloneNode(true);
-    //   item.querySelector(".p-img").src = cart.iURL + p.img;
-    //   item.querySelector(".p-name").textContent = p.name;
-    //   item.querySelector(".p-item").className =  "p-item " + p.type;
-    //   item.querySelector(".p-price").textContent = "$" + p.price.toFixed(2);
-    //   item.querySelector(".p-add").onclick = () => { cart.add(id); };
-    //   // item.className.add(p.type);
-    //   item.classList.add("hh");
-    //   console.log(item.className);
-    //   cart.hPdt.appendChild(item);
-    // }
-
     
     cart.load();
 
@@ -102,14 +169,22 @@ var cart = {
   list : () => {
     
     cart.hItems.innerHTML = "";
-    let item, part, pdt, empty = true;
+    let item,empty = true;
     for (let key in cart.items) {
-      if (cart.items.hasOwnProperty(key)) { empty = false; break; }
+      // console.log(typeof("key"));
+      if (cart.items.hasOwnProperty(key)) { 
+        // console.log(cart.items.hasOwnProperty(key));
+
+        empty = false; 
+        break; 
+      }
     }
 
     
     if (empty) {
+    //  console.log(empty);
       item = document.createElement("div");
+      // console.log(item);
       item.innerHTML = "Cart is empty";
       cart.hItems.appendChild(item);
     }
@@ -130,7 +205,9 @@ var cart = {
 
         
         subtotal = cart.items[id] * p.price;
+        // console.log(subtotal);
         total += subtotal;
+        // console.log(total);
       }
 
       
@@ -148,8 +225,12 @@ var cart = {
 
  
   add : (id) => {
-    if (cart.items[id] == undefined) { cart.items[id] = 1; }
-    else { cart.items[id]++; }
+    if (cart.items[id] == undefined) { 
+      cart.items[id] = 1; 
+    }
+    else { 
+      cart.items[id]++; 
+    }
     cart.save(); cart.list();
   },
 
@@ -187,4 +268,79 @@ var cart = {
     
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.addEventListener("DOMContentLoaded", cart.init);
+
+
+
+
+    // let template = document.getElementById("template-product").content,
+    //     p, part;
+    //     console.log("trgt");
+    //     let item = document.querySelector("p-item").childElementCount;
+    //     console.log(item);
+    //     console.log("werve");
+
+
+    // for (let id in products) {
+    //   p = products[id];
+    //   item = template.cloneNode(true);
+    //   item.querySelector(".p-img").src = cart.iURL + p.img;
+    //   item.querySelector(".p-name").textContent = p.name;
+    //   item.querySelector(".p-item").className =  "p-item " + p.type;
+    //   item.querySelector(".p-price").textContent = "$" + p.price.toFixed(2);
+    //   item.querySelector(".p-add").onclick = () => { cart.add(id); };
+    //   // item.className.add(p.type);
+    //   item.classList.add("hh");
+    //   console.log(item.className);
+    //   cart.hPdt.appendChild(item);
+    // }

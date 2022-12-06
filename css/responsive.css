@@ -76,10 +76,10 @@
                     padding-right: 13rem;
                     padding-top: 5rem;
                 }
-                .nav2-menu.active {
+                /* .nav2-menu.active {
                     display: flex;
                     justify-content: space-between;
-                }
+                } */
                 nav ul {
                     visibility: visible;
                 }
